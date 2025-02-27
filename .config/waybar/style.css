@@ -1,0 +1,137 @@
+* {
+  font-family: "FiraCode Nerd Font Propo";
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 300ms;
+}
+
+window#waybar {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+button {
+  /* Use box-shadow instead of border so the text isn't offset */
+  box-shadow: inset 0 -3px transparent;
+  /* Avoid rounded borders under each button name */
+  border: none;
+  border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+  background: inherit;
+  box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  border: 2px solid transparent;
+}
+
+#workspaces button:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.active {
+  border: 2px solid #7AA0FF;
+}
+
+#workspaces button.urgent {
+  background-color: #EB4D4B;
+}
+
+#clock,
+#battery,
+#cpu,
+#network,
+#pulseaudio {
+  padding: 0 0.5rem;
+}
+
+#window,
+#workspaces {
+  margin: 0 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
+}
+
+#clock {
+  color: #8fa3b3;
+}
+
+#battery {
+  color: #FFFFFF;
+}
+
+#battery.charging, #battery.plugged {
+  color: #26A65B;
+}
+
+@keyframes blink {
+to {
+  background-color: #ffffff;
+  color: #000000;
+}
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+  background-color: #f53c3c;
+  color: #ffffff;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+label:focus {
+  background-color: #000000;
+}
+
+#cpu {
+  color: #2ecc71;
+}
+
+#cpu:hover {
+  color: #38f285;
+}
+
+#memory {
+  background-color: #9b59b6;
+}
+
+#network {
+  color: #2980b9;
+}
+
+#network:hover {
+  color: #329ee6;
+}
+
+
+#network.disconnected {
+  color: #FFFFFF;
+  background-color: #f53c3c;
+}
+
+#pulseaudio {
+  color: #FFFFFF;
+}
+
+#pulseaudio.muted {
+  color: #A0A0A0;
+}
+
+#pulseaudio.muted:hover {
+  color: #FFFFFF;
+}
