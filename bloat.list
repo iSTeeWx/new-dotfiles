@@ -14,6 +14,7 @@ fd
 firefox
 ghostty
 git
+gnu-free-fonts
 grim
 hyprland
 intel-ucode
@@ -32,13 +33,12 @@ pavucontrol
 pipewire-pulse
 pyright
 python-black
-python-pygame
 qemu-base
 ripgrep
 slurp
 tldr
 tree
-ttf-firacode-nerd
+ttf-victor-mono-nerd
 unzip
 virt-manager
 waybar
