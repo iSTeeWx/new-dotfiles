@@ -78,8 +78,6 @@ return {
       tabline.setup({
         show_icons = false,
       })
-      vim.cmd("highlight MiniTablineFill guibg=#181825")
-      vim.cmd("highlight MiniTablineCurrent guisp=#181825")
 
       local statusline = require("mini.statusline")
       ---@diagnostic disable-next-line: duplicate-set-field
