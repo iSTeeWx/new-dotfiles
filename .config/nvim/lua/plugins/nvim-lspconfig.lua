@@ -35,6 +35,7 @@ return {
 
       local servers = {
         clangd = {},
+        jdtls = {},
         pyright = {},
         lua_ls = {
           settings = {
