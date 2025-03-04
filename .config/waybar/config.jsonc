@@ -1,58 +1,67 @@
 // -*- mode: jsonc -*-
 {
-    // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 30, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
-    "spacing": 0, // Gaps between modules (4px)
-    // Choose the order of the modules
-    "modules-left": [
-      "hyprland/window",
-    ],
-    "modules-center": [
-      "hyprland/workspaces",
-    ],
-    "modules-right": [
-      "pulseaudio",
-      "network",
-      "cpu",
-      "battery",
-      "clock",
-    ],
-    "clock": {
-      "tooltip": false,
+  "spacing": 0, // Gaps between modules (4px)
+  // Choose the order of the modules
+  "modules-left": [
+    "hyprland/window",
+  ],
+  "modules-center": [
+    "hyprland/workspaces",
+  ],
+  "modules-right": [
+    "pulseaudio",
+    "network",
+    "cpu",
+    "battery",
+    "clock",
+  ],
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+      "default": "",
+      "empty": "",
+      "urgent": "",
     },
-    "cpu": {
-      "format": "",
-      "format-alt": " {usage}%",
-      "interval": 1,
-      "on-click-right": "ghostty -e btop",
+    "active-only": false,
+    "persistent-workspaces": {
+      "*": 5,
+    }
+  },
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-muted": "󱃓",
+    "format-icons": ["󰄰", "󰪞", "󰪟", "󰪠", "󰪡", "󰪢", "󰪣", "󰪤", "󰪥"],
+    "tooltip-format": "{desc} ({volume}%)",
+    "on-click": "pavucontrol",
+  },
+  "network": {
+    "format": "󰖩",
+    "format-disconnected": "󰖪",
+    "tooltip-format": "{essid}",
+    "on-click": "ghostty -e 'sleep 0.5; NEWT_MONO=1 nmtui'",
+  },
+  "cpu": {
+    "format": "",
+    "format-alt": " {usage}%",
+    "interval": 1,
+    "on-click-right": "ghostty -e btop",
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
     },
-    "battery": {
-      "states": {
-            "warning": 30,
-            "critical": 15
-      },
-      "format": "{icon}",
-      "format-full": "",
-      "format-icons":{
-        "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-        "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
-      }, 
-      "tooltip-format": "{capacity}",
-      "interval": 1,
-    },
-    "network": {
-        "format": "󰖩",
-        "format-disconnected": "󰖪",
-        "tooltip-format": "{essid}",
-        "on-click": "ghostty -e 'sleep 0.5; NEWT_MONO=1 nmtui'",
-    },
-    "pulseaudio": {
-        "format": "{icon}",
-        "format-muted": "󱃓",
-        "format-icons": ["󰄰", "󰪞", "󰪟", "󰪠", "󰪡", "󰪢", "󰪣", "󰪤", "󰪥"],
-        "tooltip-format": "{desc} ({volume}%)",
-        "on-click": "pavucontrol",
-    },
+    "format": "{icon}",
+    "format-full": "",
+    "format-icons":{
+      "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+      "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+    }, 
+    "tooltip-format": "{capacity}",
+    "interval": 1,
+  },
+  "clock": {
+    "tooltip": false,
+  },
 }
