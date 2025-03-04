@@ -29,7 +29,7 @@ neovim
 networkmanager
 openssh
 pavucontrol
-pulseaudio
+pipewire-pulse
 pyright
 python-black
 python-pygame
