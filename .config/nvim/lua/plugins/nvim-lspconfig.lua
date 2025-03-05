@@ -37,6 +37,7 @@ return {
         clangd = {},
         jdtls = {},
         pyright = {},
+        bashls = {},
         lua_ls = {
           settings = {
             Lua = {

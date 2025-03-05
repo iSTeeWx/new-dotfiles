@@ -1,6 +1,7 @@
 7zip
 base
 base-devel
+bash-language-server
 bat
 bemenu
 brightnessctl
@@ -35,6 +36,9 @@ pyright
 python-black
 qemu-base
 ripgrep
+sdl12-compat
+sdl_gfx
+sdl_ttf
 slurp
 tldr
 tree
