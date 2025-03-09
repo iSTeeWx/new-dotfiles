@@ -12,7 +12,6 @@ dnsmasq
 dust
 fastfetch
 fd
-firefox
 ghostty
 git
 gnu-free-fonts
@@ -31,10 +30,12 @@ neovim
 networkmanager
 openssh
 pavucontrol
+pdfjs
 pipewire-pulse
 pyright
 python-black
 qemu-base
+qutebrowser
 ripgrep
 sdl12-compat
 sdl_gfx
