@@ -4,6 +4,8 @@ config.load_autoconfig(False)
 catppuccin.setup(c, "Mocha", True)
 c.content.site_specific_quirks.enabled = True
 c.colors.webpage.preferred_color_scheme = "dark"
+c.auto_save.session = True
+
 
 c.fonts.default_size = "14pt"
 c.fonts.default_family = "Source Code Pro"
