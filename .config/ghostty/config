@@ -48,10 +48,10 @@ gtk-wide-tabs = false
 gtk-adwaita=false
 gtk-titlebar = false
 
-font-family = "VictorMono Nerd Font"
-font-family-bold = "VictorMono Nerd Font"
-font-family-italic = "VictorMono Nerd Font"
-font-family-bold-italic = "VictorMono Nerd Font"
+font-family = "SauceCodePro NF"
+font-family-bold = "SauceCodePro NF"
+font-family-italic = "SauceCodePro NF"
+font-family-bold-italic = "SauceCodePro NF"
 font-size = 18
 
 font-style = "SemiBold"
