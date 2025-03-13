@@ -12,6 +12,7 @@ dnsmasq
 dust
 fastfetch
 fd
+floorp-bin
 ghostty
 git
 gnu-free-fonts
@@ -35,7 +36,6 @@ pipewire-pulse
 pyright
 python-black
 qemu-base
-qutebrowser
 ripgrep
 sdl12-compat
 sdl_gfx
