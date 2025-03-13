@@ -38,6 +38,7 @@
   "network": {
     "format": "󰖩",
     "format-disconnected": "󰖪",
+    "format-ethernet": "",
     "tooltip-format": "{essid}",
     "on-click": "ghostty -e 'sleep 0.5; NEWT_MONO=1 nmtui'",
   },
