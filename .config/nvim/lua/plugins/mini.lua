@@ -25,7 +25,12 @@ return {
       require("mini.pairs").setup()
       require("mini.align").setup()
 
-      require("mini.files").setup()
+      require("mini.files").setup({
+        windows = {
+          max_number = 2,
+          preview = true,
+        },
+      })
       vim.keymap.set("n", "<leader>e", function()
         if not MiniFiles.close() then
           MiniFiles.open()
