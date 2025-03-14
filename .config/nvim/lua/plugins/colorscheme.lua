@@ -14,6 +14,7 @@ return {
         MiniTablineModifiedVisible = { fg = '#FF5454', bg = '#232323' },
         MiniTablineModifiedHidden = { fg = '#FF5454', bg = '#232323' },
         MiniTablineModifiedCurrent = { fg = '#FF1A75', bg = '#121212' },
+        ColorColumn = { bg = '#202020' },
       },
     }
   },
