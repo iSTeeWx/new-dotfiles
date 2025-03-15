@@ -44,9 +44,12 @@
   },
   "cpu": {
     "format": "",
-    "format-alt": " {usage}%",
+    "format-alt": " {usage}%{icon}",
     "interval": 1,
     "on-click-right": "ghostty -e btop",
+    "states": {
+      "working": 10,
+    }
   },
   "battery": {
     "states": {

@@ -85,10 +85,18 @@ label:focus {
 }
 
 #cpu {
+  color: #A0A0A0;
+}
+
+#cpu.working {
   color: #2ecc71;
 }
 
 #cpu:hover {
+  color: #FFFFFF;
+}
+
+#cpu.working:hover {
   color: #38f285;
 }
 
