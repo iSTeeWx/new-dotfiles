@@ -1,4 +1,5 @@
 7zip
+apache
 base
 base-devel
 bash-language-server
@@ -27,11 +28,14 @@ linux
 linux-firmware
 lua-language-server
 lvm2
+mariadb
 neovim
 networkmanager
 openssh
 pavucontrol
 pdfjs
+php
+php-apache
 pipewire-pulse
 pyright
 python-black
