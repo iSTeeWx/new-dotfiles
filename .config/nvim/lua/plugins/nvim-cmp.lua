@@ -36,6 +36,34 @@ return {
       "hrsh7th/cmp-path",
     },
     config = function()
+      local kind_icons = {
+        Text = "",
+        Method = "󰆧",
+        Function = "󰊕",
+        Constructor = "",
+        Field = "󰇽",
+        Variable = "󰂡",
+        Class = "󰠱",
+        Interface = "",
+        Module = "",
+        Property = "󰜢",
+        Unit = "",
+        Value = "󰎠",
+        Enum = "",
+        Keyword = "󰌋",
+        Snippet = "",
+        Color = "󰏘",
+        File = "󰈙",
+        Reference = "",
+        Folder = "󰉋",
+        EnumMember = "",
+        Constant = "󰏿",
+        Struct = "",
+        Event = "",
+        Operator = "󰆕",
+        TypeParameter = "󰅲",
+      }
+
       -- See `:help cmp`
       local cmp = require("cmp")
       local luasnip = require("luasnip")
@@ -108,6 +136,22 @@ return {
           { name = "nvim_lsp" },
           { name = "luasnip" },
           { name = "path" },
+        },
+        window = {
+          completion = {
+            col_offset = -3,
+            side_padding = 0,
+          },
+          documentation = {
+            winhighlight = 'Normal:Pmenu,FloatBorder:FloatBorder,CursorLine:Visual,Search:None',
+          },
+        },
+        formatting = {
+          fields = { "kind", "abbr", "menu" },
+          format = function(entry, vim_item)
+            vim_item.kind = " " .. kind_icons[vim_item.kind] .. " "
+            return vim_item
+          end
         },
       })
     end,
