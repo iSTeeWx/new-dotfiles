@@ -4,7 +4,6 @@ base
 base-devel
 bash-language-server
 bat
-bemenu
 brightnessctl
 btop
 clang
@@ -46,6 +45,7 @@ sdl_gfx
 sdl_ttf
 slurp
 tldr
+tofi
 tree
 ttf-sourcecodepro-nerd
 unzip
