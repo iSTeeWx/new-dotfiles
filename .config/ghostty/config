@@ -58,4 +58,7 @@ font-style = "SemiBold"
 font-style-italic = "SemiBold Italic"
 font-feature = -calt
 
+cursor-invert-fg-bg = true
+adjust-cursor-thickness = 4
+
 keybind=ctrl+shift+w=close_surface
