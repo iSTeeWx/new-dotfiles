@@ -1,6 +1,8 @@
 setopt autocd
 bindkey -e
 
+export PATH=/home/vlad/.local/share/bin:$PATH
+
 HISTFILE=~/.config/zsh/histfile
 HISTSIZE=1000
 SAVEHIST=1000
