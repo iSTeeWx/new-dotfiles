@@ -48,6 +48,8 @@ gtk-wide-tabs = false
 gtk-adwaita=false
 gtk-titlebar = false
 
+gtk-custom-css = style.css
+
 font-family = "SauceCodePro NF"
 font-family-bold = "SauceCodePro NF"
 font-family-italic = "SauceCodePro NF"
