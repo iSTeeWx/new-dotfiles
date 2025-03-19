@@ -43,8 +43,9 @@
     "on-click": "ghostty -e 'sleep 0.5; NEWT_MONO=1 nmtui'",
   },
   "cpu": {
-    "format": "",
-    "format-alt": " {usage}%{icon}",
+    "format": "{icon}",
+    "format-alt": " {usage}%",
+    "format-icons": ["󰄰", "󰪞", "󰪟", "󰪠", "󰪡", "󰪢", "󰪣", "󰪤", "󰪥"],
     "interval": 1,
     "on-click-right": "ghostty -e btop",
     "states": {
