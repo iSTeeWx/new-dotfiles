@@ -4,6 +4,7 @@ base
 base-devel
 bash-language-server
 bat
+bluetui
 brightnessctl
 btop
 clang
