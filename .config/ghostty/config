@@ -42,7 +42,7 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 window-decoration = false
-theme = citruszest
+theme = Dracula
 confirm-close-surface = false
 gtk-wide-tabs = false 
 gtk-adwaita=false
