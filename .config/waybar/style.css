@@ -11,42 +11,44 @@ window#waybar {
   color: #ffffff;
 }
 
-#workspaces * {
-  transition-property: none;
+.modules-center * {
+  font-size: 4px;
 }
 
-#workspaces button {
-  color: #C0C0C0;
-  padding: 4px 5px;
+#tags {
+  margin: 1rem 0;
+  transition: width 1s;
+  transition: background-color 1s;
 }
 
-#workspaces button:hover {
-  color: #A0A0A0;
-  background: none;
+#tags button {
+  min-height: 0;
+  min-width: 0;
+  background-color: #313244;
+  border-radius: 999rem;
+
+  padding: 0 4px;
+  margin: 0 0.3rem;
 }
 
-#workspaces button.empty {
-  color: #505050;
+#tags button.occupied {
+  background-color: #cdd6f4;
 }
 
-#workspaces button.active:hover {
-  color: #9EBAFF;
+#tags button.focused {
+  background-color: #cdd6f4;
+  padding: 0 1rem;
 }
 
-#workspaces button.active {
-  color: #7AA0FF;
-}
-
-#workspaces button.urgent {
-  color: #EB4D4B;
+#tags button.urgent {
+  background-color: #f38ba8;
 }
 
 .modules-right * {
   padding: 0 0.5rem;
 }
 
-#window,
-#workspaces {
+#window {
   margin: 0 4px;
 }
 

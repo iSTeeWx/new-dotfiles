@@ -3,10 +3,10 @@
   "spacing": 0, // Gaps between modules (4px)
   // Choose the order of the modules
   "modules-left": [
-    "hyprland/window",
+    "river/window",
   ],
   "modules-center": [
-    "hyprland/workspaces",
+    "river/tags",
   ],
   "modules-right": [
     "pulseaudio",
@@ -15,18 +15,9 @@
     "battery",
     "clock",
   ],
-  "hyprland/workspaces": {
-    "format": "{icon}",
-    "format-icons": {
-      "active": "",
-      "default": "",
-      "empty": "",
-      "urgent": "",
-    },
-    "active-only": false,
-    "persistent-workspaces": {
-      "*": 5,
-    }
+  "river/tags": {
+    "num-tags": 5,
+    "tag-labels" : [ "", "", "", "", "" ]
   },
   "pulseaudio": {
     "format": "{icon}",

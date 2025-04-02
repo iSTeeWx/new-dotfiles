@@ -44,6 +44,7 @@ pyright
 python-black
 qemu-base
 ripgrep
+river-git
 sdl12-compat
 sdl_gfx
 sdl_ttf
