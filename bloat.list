@@ -29,6 +29,8 @@ linux
 linux-firmware
 lua-language-server
 lvm2
+man-db
+man-pages
 mariadb
 neovim
 networkmanager
