@@ -40,7 +40,7 @@ return {
 
       -- stolen from https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
       -- Enable each language server by filename under the lsp/ folder
-      vim.lsp.enable({ "luals", "clangd" })
+      vim.lsp.enable({ "luals", "clangd", "bashls" })
     end,
   },
 }
