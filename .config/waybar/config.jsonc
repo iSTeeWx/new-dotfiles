@@ -1,19 +1,18 @@
 // -*- mode: jsonc -*-
 {
-  "spacing": 0, // Gaps between modules (4px)
   // Choose the order of the modules
   "modules-left": [
-    "river/window",
+    "river/window"
   ],
   "modules-center": [
-    "river/tags",
+    "river/tags"
   ],
   "modules-right": [
     "pulseaudio",
     "network",
     "cpu",
     "battery",
-    "clock",
+    "clock"
   ],
   "river/tags": {
     "num-tags": 5,
@@ -24,14 +23,14 @@
     "format-muted": "󱃓",
     "format-icons": ["󰄰", "󰪞", "󰪟", "󰪠", "󰪡", "󰪢", "󰪣", "󰪤", "󰪥"],
     "tooltip-format": "{desc} ({volume}%)",
-    "on-click": "pavucontrol",
+    "on-click": "pavucontrol"
   },
   "network": {
     "format": "󰖩",
     "format-disconnected": "󰖪",
     "format-ethernet": "",
     "tooltip-format": "{essid}",
-    "on-click": "ghostty -e 'sleep 0.5; NEWT_MONO=1 nmtui'",
+    "on-click": "ghostty -e 'sleep 0.5; NEWT_MONO=1 nmtui'"
   },
   "cpu": {
     "format": "{icon}",
@@ -40,7 +39,7 @@
     "interval": 1,
     "on-click-right": "ghostty -e btop",
     "states": {
-      "working": 10,
+      "working": 10
     }
   },
   "battery": {
@@ -52,12 +51,12 @@
     "format-full": "",
     "format-icons":{
       "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-      "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+      "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
     }, 
     "tooltip-format": "{capacity}",
-    "interval": 1,
+    "interval": 1
   },
   "clock": {
-    "tooltip": false,
-  },
+    "tooltip": false
+  }
 }
