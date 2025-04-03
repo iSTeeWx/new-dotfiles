@@ -2,7 +2,6 @@ alias l='ls -A1 --group-directories-first --color=auto '
 alias poff='systemctl poweroff'
 alias susp='systemctl suspend'
 
-alias 1440='xrandr --output eDP1 --mode 2560x1440'
 alias nmtui='NEWT_MONO=1 nmtui'
 alias n='nvim '
 
