@@ -9,5 +9,5 @@ elif [[ $1 == "down" ]]; then
 fi
 
 if [[ $old_brightness != $(brightnessctl get) ]]; then
-    SWO_ID=brightness $HOME/programming/python/swo/swo.py "brightness: $(brightnessctl | grep -Po '\d+(?=%)')%"
+    SWO_ID=brightness $HOME/programming/python/swo/swo "brightness: $(brightnessctl | grep -Po '\d+(?=%)')%"
 fi
