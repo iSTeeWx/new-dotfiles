@@ -18,11 +18,9 @@ ghostty
 git
 gnu-free-fonts
 grim
-hyprland
 intel-ucode
 jdk21-openjdk
 jdk8-openjdk
-jdtls
 less
 libreoffice-fresh
 linux
@@ -54,7 +52,6 @@ tldr
 tofi
 tree
 ttf-sourcecodepro-nerd
-unzip
 virt-manager
 vscodium-bin-marketplace
 waybar
@@ -66,7 +63,6 @@ wlr-randr
 yay-bin
 yay-bin-debug
 yazi
-zip
 zsh
 zsh-autosuggestions
 zsh-syntax-highlighting
