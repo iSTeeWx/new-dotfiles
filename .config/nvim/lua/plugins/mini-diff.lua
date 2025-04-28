@@ -1,7 +1,5 @@
 return {
-  {
-    'echasnovski/mini.diff',
-    version = '*',
-    opts = {},
-  }
+  'echasnovski/mini.diff',
+  version = '*',
+  opts = {},
 }
