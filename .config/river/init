@@ -45,6 +45,9 @@ riverctl map normal Super B      spawn floorp
 riverctl map normal Super ugrave spawn 'waylock -init-color 0x000000 -input-color 0x121212 -fail-color 0x301010 -ignore-empty-password'
 riverctl map normal Super R      spawn 'killall waybar; waybar'
 
+riverctl map normal None  Print  spawn 'file=~/$(date +%Y-%m-%d_%H-%m-%S).png && grim -g "$(slurp)" $file && wl-copy < $file'
+riverctl map normal Shift Print  spawn 'file=~/$(date +%Y-%m-%d_%H-%m-%S).png && grim $file && wl-copy < $file'
+
 riverctl map normal Super W close
 
 riverctl map normal Super M exit
