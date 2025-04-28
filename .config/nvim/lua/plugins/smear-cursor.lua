@@ -1,6 +1,8 @@
 return {
   {
     "sphamba/smear-cursor.nvim",
-    opts = {},
+    opts = {
+      smear_to_cmd = false
+    },
   },
 }
