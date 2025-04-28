@@ -21,6 +21,7 @@ grim
 intel-ucode
 jdk21-openjdk
 jdk8-openjdk
+jdtls
 less
 libreoffice-fresh
 linux
@@ -61,7 +62,6 @@ wget
 wl-clipboard
 wlr-randr
 yay-bin
-yay-bin-debug
 yazi
 zsh
 zsh-autosuggestions
