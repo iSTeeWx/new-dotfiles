@@ -32,6 +32,8 @@ vim.keymap.set('n', 'H', '<cmd>bp<cr>')
 vim.keymap.set('n', 'L', '<cmd>bn<cr>')
 vim.keymap.set('n', '<leader>bd', '<cmd>bd<cr>')
 
+vim.keymap.set('n', 'grf', function () vim.lsp.buf.format() end, { desc = "vim.lsp.buf.format()" })
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = "https://github.com/folke/lazy.nvim.git"
