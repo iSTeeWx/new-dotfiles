@@ -3,7 +3,7 @@ return {
   version = '*',
   lazy = true,
   keys = {
-    { mode = {"i", "v"}, "s" },
+    { mode = { "i", "v" }, "s" },
   },
   opts = {},
 }
