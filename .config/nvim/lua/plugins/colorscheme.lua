@@ -4,9 +4,9 @@ return {
   opts = {
     color_overrides = {
       mocha = {
-        base = "#121212",
-        mantle = "#121212",
-        crust = "#121212",
+        base = "#000000",
+        mantle = "#000000",
+        crust = "#000000",
       },
     },
     integrations = {
