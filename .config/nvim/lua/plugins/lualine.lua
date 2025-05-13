@@ -3,9 +3,10 @@ return {
   opts = {
     sections = {
       lualine_b = { "diff", "diagnostics" },
+      lualine_x = { "filetype" },
+    },
+    tabline = {
       lualine_c = {
-      },
-      lualine_x = {
         {
           "buffers",
           component_separators = { left = '', right = '' },
@@ -13,8 +14,7 @@ return {
           use_mode_colors = true,
           symbols = { alternate_file = "", },
         },
-        "filetype"
       },
-    }
-  }
+    },
+  },
 }
