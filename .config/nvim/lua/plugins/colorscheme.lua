@@ -21,5 +21,6 @@ return {
   },
   init = function()
     vim.cmd.colorscheme "catppuccin-mocha"
+    vim.api.nvim_set_hl(0, 'WinSeparator', { fg = '#A0A0A0' })
   end,
 }
