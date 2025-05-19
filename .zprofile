@@ -7,3 +7,4 @@ export MYSQL_HISTFILE=$HOME/.local/share/mariadb/history
 export PATH=/opt/processing-4.3.4/:$PATH
 
 export EDITOR=nvim
+export MANPAGER='nvim +Man!'
