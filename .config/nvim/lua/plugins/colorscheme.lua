@@ -2,6 +2,7 @@ return {
   "catppuccin/nvim",
   name = "catppuccin",
   opts = {
+    transparent_background = true,
     color_overrides = {
       mocha = {
         base = "#000000",
