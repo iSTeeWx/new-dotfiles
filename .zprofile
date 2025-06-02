@@ -8,3 +8,7 @@ export PATH=/opt/processing-4.3.4/:$PATH
 
 export EDITOR=nvim
 export MANPAGER='nvim +Man!'
+
+if [ -z "$WAYLAND_DISPLAY" ] && [ $(tty) = "/dev/tty1" ]; then
+  exec river > ~/.cache/river.log 2>&1
+fi
