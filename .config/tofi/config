@@ -9,10 +9,10 @@
 	# characters not in the chosen font will fail to render.
 	#
 	# Otherwise, fonts are interpreted in Pango format.
-	font = "/usr/share/fonts/adobe-source-code-pro/SourceCodePro-SemiboldIt.otf"
+	font = "/usr/share/fonts/TTF/SauceCodeProNerdFont-BoldItalic.ttf"
 
 	# Point size of text.
-	font-size = 18
+	font-size = 12
 
 	# Comma separated list of OpenType font feature settings to apply,
 	# if supported by the chosen font. The format is similar to the CSS
@@ -98,7 +98,7 @@
 	# alternate-result-background-corner-radius = 0
 
 	# Selection text
-	selection-color = #89B4FA
+	selection-color = #2980b9
 	selection-background = #00000000
 	selection-background-padding = 0
 	selection-background-corner-radius = 0
@@ -138,7 +138,7 @@
 ### Text layout
 #
 	# Prompt to display.
-	prompt-text = "$ "
+	prompt-text = "run: "
 
 	# Extra horizontal padding between prompt and input.
 	prompt-padding = 0
@@ -151,10 +151,10 @@
 	num-results = 0
 
 	# Spacing between results in pixels. Can be negative.
-	result-spacing = 0
+	result-spacing = 24
 
 	# List results horizontally.
-	horizontal = false
+	horizontal = true
 
 	# Minimum width of input in horizontal mode.
 	min-input-width = 0
@@ -163,32 +163,17 @@
 ### Window theming
 #
 	# Width and height of the window. Can be pixels or a percentage.
-	width = 600
-	height = 200
+	width = 100%
+	height = 36
 
 	# Window background color
-	background-color = #121212
+	background-color = #000
 
 	# Width of the border outlines in pixels.
 	outline-width = 0
 
-	# Border outline color
-	outline-color = #080800
-
 	# Width of the border in pixels.
-	border-width = 2
-
-	# Border color
-	border-color = #89B9FA
-
-	# Radius of window corners in pixels.
-	corner-radius = 10
-
-	# Padding between borders and text. Can be pixels or a percentage.
-	padding-top = 8
-	padding-bottom = 8
-	padding-left = 8
-	padding-right = 8
+	border-width = 0
 
 	# Whether to clip text drawing to be within the specified padding. This
 	# is mostly important for allowing text to be inset from the border,
@@ -209,7 +194,7 @@
 	#
 	# Supported values: top-left, top, top-right, right, bottom-right,
 	# bottom, bottom-left, left, center.
-	anchor = center
+	anchor = top-left
 
 	# Set the size of the exclusive zone.
 	#
@@ -245,14 +230,8 @@
 	# facilitate the creation of custom modes.
 	# history-file = /path/to/histfile
 
-	# Select the matching algorithm used. If normal, substring matching is
-	# used, weighted to favour matches closer to the beginning of the
-	# string. If prefix, only substrings at the beginning of the string are
-	# matched. If fuzzy, searching is performed via a simple fuzzy matching
-	# algorithm.
-	#
-	# Supported values: normal, prefix, fuzzy
-	matching-algorithm = normal
+	# Use fuzzy matching for searches.
+	fuzzy-match = false
 
 	# If true, require a match to allow a selection to be made. If false,
 	# making a selection with no matches will print input to stdout.
@@ -263,25 +242,6 @@
 	# remaining. If there's only one result on startup, window creation is
 	# skipped altogether.
 	auto-accept-single = false
-
-	# If true, typed input will be hidden, and what is displayed (if
-	# anything) is determined by the hidden-character option.
-	hide-input = false
-
-	# Replace displayed input characters with a character. If the empty
-	# string is given, input will be completely hidden.
-	# This option only has an effect when hide-input is set to true.
-	hidden-character = "*"
-
-	# If true, use physical keys for shortcuts, regardless of the current
-	# keyboard layout. If false, use the current layout's keys.
-	physical-keybindings = true
-
-	# Instead of printing the selected entry, print the 1-based index of
-	# the selection. This option has no effect in run or drun mode. If
-	# require-match is set to false, non-matching input will still result
-	# in the input being printed.
-	print-index = false
 
 	# If true, directly launch applications on selection when in drun mode.
 	# Otherwise, just print the command line to stdout.
