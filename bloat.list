@@ -41,15 +41,15 @@ php-apache
 pipewire-pulse
 qemu-base
 ripgrep
-river-git
+river
 river-luatile-git
+sandbar-git
 slurp
 tldr
 tofi
 ttf-sourcecodepro-nerd
 virt-manager
 vscodium-bin-marketplace
-waybar
 waylock
 wev
 wget

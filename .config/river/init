@@ -4,7 +4,9 @@
 # autostart
 #
 riverctl spawn ghostty
-riverctl spawn waybar
+# riverctl spawn waybar
+riverctl spawn '/home/vlad/.config/river/bar.sh'
+riverctl spawn '/home/vlad/.config/river/status.sh'
 riverctl spawn 'wl-paste --primary --watch wl-copy --primary --clear' # disable middle click paste
 
 #
@@ -43,7 +45,10 @@ riverctl map normal Super Return spawn ghostty
 riverctl map normal Super Space  spawn tofi-drun
 riverctl map normal Super B      spawn floorp
 riverctl map normal Super ugrave spawn 'waylock -init-color 0x000000 -input-color 0x121212 -fail-color 0x1E1E3E -ignore-empty-password'
-riverctl map normal Super R      spawn 'killall waybar; waybar'
+# riverctl map normal Super R      spawn 'killall waybar; waybar'
+riverctl map normal Super R      spawn 'killall cat; /home/vlad/.config/river/bar.sh'
+riverctl map normal Super T      spawn '/home/vlad/.config/river/status.sh'
+riverctl map normal Super+Shift T      spawn 'pkill -f status.sh'
 
 riverctl map normal None  Print  spawn 'file=~/$(date +%Y-%m-%d_%H-%m-%S).png && grim -g "$(slurp)" $file && wl-copy < $file'
 riverctl map normal Shift Print  spawn 'file=~/$(date +%Y-%m-%d_%H-%m-%S).png && grim $file && wl-copy < $file'
