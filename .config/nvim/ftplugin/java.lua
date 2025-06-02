@@ -1,6 +1,6 @@
 local config = {
   cmd = { '/usr/share/java/jdtls/bin/jdtls' },
-  root_dir = vim.fs.dirname(vim.fs.find({ 'gradlew', '.git', 'mvnw' }, { upward = true })[1]),
+  root_dir = vim.fs.dirname(vim.fs.find({ 'gradlew', '.git', 'mvnw', 'run' }, { upward = true })[1]),
   settings = {
     java = {
       project = {
@@ -13,3 +13,6 @@ local config = {
 }
 
 require('jdtls').start_or_attach(config)
+
+
+vim.keymap.set('n', '<leader>r', '<cmd>!../run<cr>')
