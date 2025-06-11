@@ -1,18 +1,27 @@
 #!/bin/env sh
 
+cpu_last_work=1
+cpu_last_total=1
 cpu() {
-	cpu="$(grep -o "^[^ ]*" /proc/loadavg)"
+  out=(`$HOME/.config/river/cpu-usage $cpu_last_total $cpu_last_work`)
+  cpu_last_total=${out[0]}
+  cpu_last_work=${out[1]}
+  cpu=$(printf "%.0f%% " "${out[2]}")
 }
 
 wifi() {
-  state=$(nmcli | grep -Po '(?<=^wlp1s0?: )\w')
-
   wifi=""
-
-  if [[ $state = "u" ]]; then
+  if [[ $(cat /sys/class/rfkill/rfkill1/soft) = "1" ]]; then
     wifi="airplane "
-  elif [[ $state = "d" ]]; then
-    wifi="disconnected "
+  elif [[ $(cat /sys/class/net/wlp1s0/operstate) = "down" ]]; then
+    wifi="no-network "
+  fi
+}
+
+brightness() {
+  brightness="$(brightnessctl | grep -Po "\d+%") "
+  if [[ $brightness = "100% " ]]; then
+    brightness=""
   fi
 }
 
@@ -32,13 +41,19 @@ bat() {
 	read -r bat_capacity </sys/class/power_supply/BAT0/capacity
 
   icon=''
+  color=''
   if [[ $bat_status = "Discharging" ]]; then
     icon='-'
   elif [[ $bat_status = "Charging" ]]; then
+    color='^fg(#70FF93)'
     icon='+'
   fi
 
-	bat="$bat_capacity%$icon "
+  if [[ $bat_capacity -lt 30 ]]; then
+    color='^bg(#FF0000)^fg(#FFFFFF)'
+  fi
+
+  bat="$color$bat_capacity%$icon^fg()^bg() "
 
   if [[ $bat_capacity = '100' ]]; then
     bat=""
@@ -50,7 +65,7 @@ datetime() {
 }
 
 display() {
-	echo "all status $wifi$vol$bat$datetime" >"$FIFO"
+	echo "all status $wifi$brightness$vol$cpu$bat$datetime" >"$FIFO"
 }
 
 printf "%s" "$$" > "$XDG_RUNTIME_DIR/status_pid"
@@ -62,7 +77,8 @@ while true; do
 	sleep 1 &
 	wait && {
 		[ $((sec % 1)) -eq 0 ] && wifi 
-		[ $((sec % 15)) -eq 0 ] && cpu
+		[ $((sec % 1)) -eq 0 ] && brightness
+		[ $((sec % 1)) -eq 0 ] && cpu
 		[ $((sec % 2)) -eq 0 ] && bat
 		[ $((sec % 1)) -eq 0 ] && vol
 		[ $((sec % 10)) -eq 0 ] && datetime
