@@ -34,6 +34,8 @@ riverctl input pointer-2-7-SynPS/2_Synaptics_TouchPad natural-scroll enabled
 
 riverctl input pointer-2522-23808-COMPANY__USB_Device accel-profile flat
 
+riverctl input pointer-12815-8789-Telink_Wireless_Receiver_Mouse accel-profile flat
+
 riverctl map-switch normal lid close spawn 'waylock -init-color 0x000000 -input-color 0x121212 -fail-color 0x1E1E3E -ignore-empty-password'
 
 riverctl spawn "wlr-randr --output eDP-1 --custom-mode 2560x1440@60"
@@ -73,8 +75,8 @@ riverctl map normal Super+Shift semicolon send-to-output previous
 riverctl map normal Super+Shift Return zoom
 
 # Super+H and Super+L to decrease/increase the main ratio of rivertile(1)
-riverctl map normal Super H send-layout-cmd rivertile "main-ratio -0.05"
-riverctl map normal Super L send-layout-cmd rivertile "main-ratio +0.05"
+riverctl map normal Super H send-layout-cmd luatile "decrease_ratio()"
+riverctl map normal Super L send-layout-cmd luatile "increase_ratio()"
 
 # Super+Shift+H and Super+Shift+L to increment/decrement the main count of rivertile(1)
 riverctl map normal Super+Shift H send-layout-cmd rivertile "main-count +1"

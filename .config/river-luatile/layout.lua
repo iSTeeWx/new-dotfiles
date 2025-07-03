@@ -1,5 +1,5 @@
 -- You can define your global state here
-local main_ratio = 0.6
+local main_ratio = 0.55
 local border_width = 2
 -- Track the last set border width (to avoid repeated changes)
 local last_border_width = -1
@@ -27,4 +27,12 @@ function handle_layout(args)
         end
     end
     return retval
+end
+
+function increase_ratio()
+  main_ratio = math.min(main_ratio + 0.05, 0.95)
+end
+
+function decrease_ratio()
+  main_ratio = math.max(main_ratio - 0.05, 0.05)
 end
