@@ -9,8 +9,8 @@ mkfifo "$FIFO"
 
 while cat "$FIFO"; do :; done | sandbar \
 	-font "Sauce Code Pro NF:19" \
-	-active-fg-color "#FFFFFF" \
-	-active-bg-color "#313244" \
+	-active-fg-color "#000000" \
+	-active-bg-color "#7AA0FF" \
 	-inactive-fg-color "#FFFFFF" \
 	-inactive-bg-color "#000000" \
 	-urgent-fg-color "#000000" \
