@@ -24,12 +24,14 @@ elif [[ $1 == "mute" ]]; then
     pactl set-sink-mute 0 toggle
 fi
 
-if [[ $old_volume != $(pactl get-sink-volume 0) || $old_mute != $(pactl get-sink-mute 0) ]]; then
-    if [[ $(pactl get-sink-mute 0) == "Mute: yes" ]]; then
-        # HERBE_ID=/volume-notification herbe "volume: mute"
-        SWO_ID=volume $HOME/programming/python/swo/swo "volume: mute"
-    else
-        # HERBE_ID=/volume-notification herbe "volume: $(pactl get-sink-volume 0 | grep -Po '\d+(?=%)' | head -n 1)%"
-        SWO_ID=volume $HOME/programming/python/swo/swo "volume: $(pactl get-sink-volume 0 | grep -Po '\d+(?=%)' | head -n 1)%"
-    fi
-fi
+# if [[ $old_volume != $(pactl get-sink-volume 0) || $old_mute != $(pactl get-sink-mute 0) ]]; then
+#     if [[ $(pactl get-sink-mute 0) == "Mute: yes" ]]; then
+#         # HERBE_ID=/volume-notification herbe "volume: mute"
+#         # SWO_ID=volume $HOME/programming/python/swo/swo "volume: mute"
+#         # echo 0 > /tmp/wobpipe
+#     else
+#         # HERBE_ID=/volume-notification herbe "volume: $(pactl get-sink-volume 0 | grep -Po '\d+(?=%)' | head -n 1)%"
+#         # SWO_ID=volume $HOME/programming/python/swo/swo "volume: $(pactl get-sink-volume 0 | grep -Po '\d+(?=%)' | head -n 1)%"
+#         # echo $(pactl get-sink-volume 0 | grep -Po '\d+(?=%)' | head -n 1) > /tmp/wobpipe
+#     fi
+# fi
