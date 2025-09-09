@@ -23,6 +23,13 @@ zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
 autoload -Uz compinit
 compinit
 
+echo -ne '\e[5 q'
+
+# Use beam shape cursor for each new prompt.
+preexec() {
+   echo -ne '\e[5 q'
+}
+
 source ~/.config/zsh/aliases.sh
 source ~/.config/zsh/keymap.sh
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme

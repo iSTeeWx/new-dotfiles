@@ -1,0 +1,10 @@
+{
+  "main with no args": {
+    "prefix": "main",
+    "body": [ "int main(void) {", "\t$0", "\treturn 0;", "}" ]
+  },
+  "print variable": {
+    "prefix": "pv",
+    "body": "printf(\"$1 = %${2:d}\\n\", ${1:var}$3);"
+  }
+}
